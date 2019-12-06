@@ -61,5 +61,5 @@ Scenario('test something', async (I) => {
     assertNotEqual(numMoeteregistrering,numMoetemappe);
     assertNotEqual(numMoetemappe,numLusterSøk);
 
-    pause();
+
 });
