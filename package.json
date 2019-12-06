@@ -12,5 +12,7 @@
     "puppeteer": "^2.0.0",
     "randomstring": "^1.1.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mocha-multi": "^1.1.3"
+  }
 }

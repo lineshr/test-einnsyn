@@ -10,30 +10,25 @@ exports.config = {
       }
     }
   },
- mocha: {
+
+mocha: {
     reporterOptions: {
-      codeceptjs-cli-reporter: {
+      'mocha-junit-reporter': {
+        stdout: './reports/console.log',
+        options: {
+          mochaFile: './reports/result.xml',
+          testsuitesTitle: 'CodeceptJS Tests',
+        },
+        "attachments": true //add screenshot for a failed test
+      },
+      'codeceptjs-cli-reporter': {
         stdout: '-',
         options: {
-          verbose: true,
           steps: true,
-        }
-      },
-      mochawesome: {
-       stdout: './output/console.log',
-       options: {
-         reportDir: './output',
-         reportFilename: 'report'
-      },
-      mocha-junit-reporter: {
-        stdout: './output/console.log',
-        options: {
-          mochaFile: './output/result.xml'
         },
-        attachments: true //add screenshot for a failed test
-      }
-    }
-  }  
+      },
+    },
+  },
   include: {
     I: './steps_file.js'
   },
