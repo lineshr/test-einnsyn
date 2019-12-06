@@ -5,13 +5,19 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost',
       waitForNavigation:  [ "domcontentloaded", "networkidle0" ],
-      show: true
+       chrome:{
+        args: ['--no-sandbox']
+      }
     }
   },
+  mocha: {
+    reporterOptions: {
+        mochaFile: 'output/result.xml'
+    }
+  },  
   include: {
     I: './steps_file.js'
   },
   bootstrap: null,
-  mocha: {},
-  name: 'testproject'
+  name: 'test-einnysn'
 }
