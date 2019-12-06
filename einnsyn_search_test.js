@@ -1,7 +1,7 @@
 
 Feature('Einnsyn search');
 
-Scenario('test something', async (I) => {
+Scenario('søker antall treff...', async (I) => {
     I.amOnPage('https://einnsyn.no/');
     let initial = await I.grabTextFrom('.search-count');
     I.say('initial');
