@@ -16,7 +16,7 @@ mocha: {
       'mocha-junit-reporter': {
         stdout: './reports/console.log',
         options: {
-          mochaFile: './reports/result.xml',
+          mochaFile: './output/result.xml',
           testsuitesTitle: 'CodeceptJS Tests',
         },
         "attachments": true //add screenshot for a failed test
