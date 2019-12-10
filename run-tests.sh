@@ -13,4 +13,5 @@ mkdir -p output
 npm install
 npm run build
 npm install codeceptjs puppeteer mocha-multi randomstring --save-dev
-npx codeceptjs run --steps
+npx codeceptjs run --reporter mocha-multi
+
